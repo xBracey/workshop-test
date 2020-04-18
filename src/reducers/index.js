@@ -10,7 +10,7 @@ const city = (state = defaultState, action) => {
     case "RESET_CITIES":
       return defaultState;
     case "SET_LOADING":
-      return { ...state, isLoading: true };
+      return { ...state, cities: [], isLoading: true };
     default:
       return state;
   }

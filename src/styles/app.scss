@@ -1,6 +1,7 @@
 $grey: #414361;
 $purple: #7f2ccb;
 $black: #2a2d43;
+$pink: #ff84e8;
 
 /* Safari */
 @-webkit-keyframes spin {
@@ -21,12 +22,29 @@ $black: #2a2d43;
   }
 }
 
+@import "./table";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
 .outer-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: calc(100vh - 100px);
   background-color: $grey;
+  padding: 50px;
 
   .inner-container {
     display: flex;

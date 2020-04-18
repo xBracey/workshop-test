@@ -1,0 +1,35 @@
+.cities {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+
+  .table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid white;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+
+    h3 {
+      width: 100%;
+      font-size: 22px;
+      text-decoration: underline;
+    }
+
+    .city-list {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .city {
+        margin: 10px;
+      }
+    }
+  }
+}

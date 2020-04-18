@@ -1,13 +1,18 @@
 import React from "react";
 import "./app.css";
-import Search from "./components/search";
-import Loader from "./components/loader";
+import { CityCounter, Search, Loader, Cities } from "./components";
 import { connect } from "react-redux";
 import { setCities, setLoading, resetCities } from "./actions";
 
 class App extends React.Component {
   render() {
-    const { isLoading, setCities, setLoading, resetCities } = this.props;
+    const {
+      cities,
+      isLoading,
+      setCities,
+      setLoading,
+      resetCities,
+    } = this.props;
 
     return (
       <div className="outer-container">
@@ -19,7 +24,9 @@ class App extends React.Component {
             setLoading={setLoading}
             resetCities={resetCities}
           />
+          <CityCounter cities={cities} />
           <Loader isLoading={isLoading} />
+          <Cities cities={cities} />
         </div>
       </div>
     );
