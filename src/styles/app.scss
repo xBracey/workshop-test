@@ -2,6 +2,25 @@ $grey: #414361;
 $purple: #7f2ccb;
 $black: #2a2d43;
 
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .outer-container {
   display: flex;
   justify-content: center;
@@ -23,6 +42,17 @@ $black: #2a2d43;
 
     .search-bar {
       margin-right: 20px;
+    }
+
+    .loader {
+      margin: 25px;
+      border: 4px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 4px solid #3498db;
+      width: 30px;
+      height: 30px;
+      -webkit-animation: spin 2s linear infinite; /* Safari */
+      animation: spin 2s linear infinite;
     }
   }
 }

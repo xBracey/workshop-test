@@ -1,13 +1,13 @@
 import React from "react";
 import "./app.css";
 import Search from "./components/search";
+import Loader from "./components/loader";
 import { connect } from "react-redux";
 import { setCities, setLoading, resetCities } from "./actions";
 
 class App extends React.Component {
   render() {
-    const { setCities, setLoading, resetCities } = this.props;
-    console.log(this.props);
+    const { isLoading, setCities, setLoading, resetCities } = this.props;
 
     return (
       <div className="outer-container">
@@ -19,6 +19,7 @@ class App extends React.Component {
             setLoading={setLoading}
             resetCities={resetCities}
           />
+          <Loader isLoading={isLoading} />
         </div>
       </div>
     );
