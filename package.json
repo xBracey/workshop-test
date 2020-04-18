@@ -13,13 +13,12 @@
     "redux": "^4.0.5"
   },
   "scripts": {
-    "start": "yarn scss; react-scripts start",
+    "start": "yarn scss; concurrently --kill-others \"yarn watch-scss\" \"yarn start\"",
     "build": "yarn scss; react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "watch-scss": "node-sass --watch ./src/styles/app.scss -o ./src",
-    "scss": "node-sass ./src/styles/app.scss -o ./src",
-    "dev": "yarn scss; concurrently --kill-others \"yarn watch-scss\" \"yarn start\""
+    "scss": "node-sass ./src/styles/app.scss -o ./src"
   },
   "eslintConfig": {
     "extends": "react-app"

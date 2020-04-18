@@ -19,7 +19,6 @@
   .cities .table {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     border: 5px solid white;
     border-radius: 10px;
@@ -65,8 +64,17 @@ code {
     padding: 50px;
     color: white;
     min-height: 600px; }
-    .outer-container .inner-container .search-bar {
-      margin-right: 20px; }
+    .outer-container .inner-container h1 {
+      text-align: center; }
+    .outer-container .inner-container form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap; }
+      .outer-container .inner-container form .search-bar {
+        margin: 15px; }
+      .outer-container .inner-container form input[type="submit"] {
+        height: 30px; }
     .outer-container .inner-container .loader {
       margin: 25px;
       border: 4px solid #f3f3f3;

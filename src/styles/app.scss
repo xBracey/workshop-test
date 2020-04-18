@@ -58,8 +58,23 @@ code {
     color: white;
     min-height: 600px;
 
-    .search-bar {
-      margin-right: 20px;
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .search-bar {
+        margin: 15px;
+      }
+
+      input[type="submit"] {
+        height: 30px;
+      }
     }
 
     .loader {
