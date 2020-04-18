@@ -1,6 +1,6 @@
 import React from "react";
 
-class SearchBar extends React.Component {
+class SearchInput extends React.Component {
   render() {
     const { onTextChange, searchText } = this.props;
 
@@ -15,4 +15,4 @@ class SearchBar extends React.Component {
   }
 }
 
-export default SearchBar;
+export default SearchInput;
